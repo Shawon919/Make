@@ -213,7 +213,7 @@ CORS_ALLOW_METHODS = [
 ]
 
 
-ALLOWED_HOSTS = ['myproject.vercel.app']
+ALLOWED_HOSTS = ['vercel.app']
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
