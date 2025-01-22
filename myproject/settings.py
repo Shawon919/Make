@@ -212,4 +212,6 @@ CORS_ALLOW_METHODS = [
 ]
 
 
+ALLOWED_HOSTS = ['.varcel.app']
+
  
