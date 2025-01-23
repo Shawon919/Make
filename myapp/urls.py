@@ -10,6 +10,7 @@ urlpatterns = [
     path('varify-otp/',views.varify_otp.as_view(),name='varify-otp/'),
     path('reset-pass/',views.reset_password.as_view(),name='reset-pass/'),
     path('get-user/',views.getusers.as_view(),name='get-uer/'),
+    path('email/',views.submitemail.as_view(),name='email/'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

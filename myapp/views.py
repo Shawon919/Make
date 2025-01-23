@@ -115,6 +115,13 @@ class getusers(APIView):
             return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
         
         
+class submitemail(APIView):
+    def post(self,request):
+        email = request.data.get('email')
+        if User.objects.filter(email=email).exists():
+            return Response('ok')
+        return Response('does not exist')
+        
            
         
     
