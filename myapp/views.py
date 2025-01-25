@@ -119,8 +119,17 @@ class submitemail(APIView):
     def post(self,request):
         email = request.data.get('email')
         if User.objects.filter(email=email).exists():
-            return Response('ok')
-        return Response('does not exist')
+            try:
+                user = User.objects.get(email=email)
+                username = user.first_name
+                return Response({'status':'success','message':'email found','username':{username}},status=status.HTTP_200_OK)
+            
+            
+            except User.DoesNotExist:
+                return Response({'message':'email not found'},status=status.HTTP_404_NOT_FOUND)
+                
+            
+        
         
            
         
