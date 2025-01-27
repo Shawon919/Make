@@ -9,6 +9,7 @@ from django.conf import settings
 
 api_patterns = [
     path('',include('myapp.urls'),),
+    path('product/',include('product.urls'),),
    
 ]
 
